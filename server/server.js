@@ -19,8 +19,6 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
-// W4gYRyjhCfqG7DjR himanshuu673
-// mongodb+srv://himanshuu673:<password>@cluster0.izxnotv.mongodb.net/
 //ROUTES
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 app.use("/api/v1/post", require("./routes/postRoutes"));

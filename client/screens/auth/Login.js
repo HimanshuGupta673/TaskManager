@@ -24,7 +24,11 @@ const Login = ({ navigation }) => {
         return;
       }
       setLoading(false);
-      const { data } = await axios.post("/auth/login", { email, password });
+      console.log("login begin")
+      const response = await axios.post("/auth/login", { email, password });
+      console.log(response)
+      const { data } = response;
+      console.log("login ends");
       setState(data);
       await AsyncStorage.setItem("@auth", JSON.stringify(data));
       alert(data && data.message);
